@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Carga de Stock</title>
-    <script src="script.js"></script>
+  <title>Stock de productos</title>
+  <link rel="icon" type="image/png" href="imagenes/favicon.png">
+  <link rel="stylesheet" type="text/css" href="CSS/styles.css">
 </head>
 <body>
-    <h1>Carga de Stock</h1>
- 
+  <div class="navbar">
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Productos</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </div>
+  
+  <div class="content">
+    <h1>Stock de productos</h1>
+    <p>Nombre del producto: <span id="nombreProducto"></span></p>
+    <p>Stock actual: <span id="stockActual"></span></p>
+    <p>Precio unitario: $<span id="precioUnitario"></span></p>
+    <p>Proveedor: <span id="proveedor"></span></p>
+  </div>
+  
+  <script src="JS/script.js"></script>
 </body>
 </html>
