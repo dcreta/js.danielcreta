@@ -1,27 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Stock de productos</title>
-  <link rel="icon" type="image/png" href="imagenes/favicon.png">
-  <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <title>Sistema de Stock</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="imagenes/favicon.png">
 </head>
 <body>
-  <div class="navbar">
-    <ul>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Productos</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul>
-  </div>
-  
-  <div class="content">
-    <h1>Stock de productos</h1>
-    <p>Nombre del producto: <span id="nombreProducto"></span></p>
-    <p>Stock actual: <span id="stockActual"></span></p>
-    <p>Precio unitario: $<span id="precioUnitario"></span></p>
-    <p>Proveedor: <span id="proveedor"></span></p>
-  </div>
-  
-  <script src="JS/script.js"></script>
+    <div class="container">
+        <h1 class="mt-5">Sistema de Stock</h1>
+
+        <div class="mt-4">
+            <p>Stock: <span id="stock"></span></p>
+            <p id="resultado"></p>
+
+            <div class="form-group">
+                <label for="cantidad">Ingrese la cantidad de unidades a cargar:</label>
+                <input type="number" class="form-control" id="cantidad">
+            </div>
+
+            <button class="btn btn-primary" onclick="cargarStock()">Cargar Stock</button>
+        </div>
+
+        <div class="mt-4">
+            <h2>Productos</h2>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Stock Inicial</th>
+                        <th>Stock Actual</th>
+                        <th>Precio Unitario</th>
+                        <th>Proveedor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Producto A</td>
+                        <td id="stockInicialA"></td>
+                        <td id="stockActualA"></td>
+                        <td>$10.99</td>
+                        <td>Proveedor X</td>
+                    </tr>
+                    <tr>
+                        <td>Producto B</td>
+                        <td id="stockInicialB"></td>
+                        <td id="stockActualB"></td>
+                        <td>$15.99</td>
+                        <td>Proveedor Y</td>
+                    </tr>
+                    <tr>
+                        <td>Producto C</td>
+                        <td id="stockInicialC"></td>
+                        <td id="stockActualC"></td>
+                        <td>$8.99</td>
+                        <td>Proveedor Z</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="JS/script.js"></script>
 </body>
 </html>
